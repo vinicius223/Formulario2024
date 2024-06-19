@@ -18,17 +18,17 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `formulariolocal`
+-- Banco de dados: `formlocalhost`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `formulariolocal`
+-- Estrutura para tabela `contato`
 --
 
-DROP TABLE IF EXISTS `formulariolocal`;
-CREATE TABLE IF NOT EXISTS `formulariolocal` (
+DROP TABLE IF EXISTS `contato`;
+CREATE TABLE IF NOT EXISTS `contato` (
   `nome` int NOT NULL,
   `email` int NOT NULL,
   `mensagem` int NOT NULL

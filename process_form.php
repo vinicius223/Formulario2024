@@ -1,18 +1,4 @@
 <?php
-//if ($_SERVER["REQUEST_METHOD"] == "POST") {
-//    $nome = htmlspecialchars($_POST['nome']);
-//    $email = htmlspecialchars($_POST['email']);
-//    $mensagem = htmlspecialchars($_POST['mensagem']);
-
-    // Aqui você pode enviar os dados para um email, salvar no banco de dados, etc.
-//    echo "Obrigado, $nome! Sua mensagem foi enviada com sucesso.";
-//}
-
-
-// FormLocalhost (nome do banco)
-
-
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Pega os dados do formulário
     $nome = htmlspecialchars($_POST['nome']);
@@ -23,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     include 'conexao.php';
 
     // Prepara a declaração SQL
-    $sql = "INSERT INTO FormLocalhost (nome, email, mensagem) VALUES (?, ?, ?)";
+    $sql = "INSERT INTO formulariolocal (nome, email, mensagem) VALUES (?, ?, ?)";
     $stmt = $conn->prepare($sql);
 
     if ($stmt) {
@@ -47,5 +33,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->close();
 }
 ?>
-
 
