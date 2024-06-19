@@ -9,8 +9,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     include 'conexao.php';
 
     // Prepara a declaração SQL
-    $sql = "INSERT INTO formulariolocal (nome, email, mensagem) VALUES (?, ?, ?)";
-    $stmt = $conn->prepare($sql);
+    $sql = "INSERT INTO contato (nome, email, mensagem) VALUES (?, ?, ?)";
+    $stmt = $mysqli->prepare($sql);
 
     if ($stmt) {
         // Bind dos parâmetros
@@ -26,11 +26,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Fecha a declaração
         $stmt->close();
     } else {
-        echo "Erro na preparação da declaração: " . $conn->error;
+        echo "Erro na preparação da declaração: " . $mysqli->error;
     }
 
     // Fecha a conexão
-    $conn->close();
+    $mysqli->close();
 }
 ?>
 
