@@ -5,8 +5,8 @@ body {
 
 h2 {
     color: #333;
-    align: center;
-   }
+    text-align: center;
+}
 
 form {
     max-width: 500px;
