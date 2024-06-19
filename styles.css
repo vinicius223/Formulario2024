@@ -45,3 +45,10 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #45a049;
 }
+.aviso{
+    background-color: #af4c4c;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+
+}
